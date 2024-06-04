@@ -14,7 +14,7 @@ function App() {
   setTimeout(() => {
     localStorage.removeItem('creatUser');
     refreshPage()
-  }, 10000);
+  }, 100000);
 
   const state = localStorage.getItem('creatUser')
 
