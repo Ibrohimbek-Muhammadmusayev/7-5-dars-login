@@ -7,7 +7,17 @@ function App() {
     return <Navigate to={path} />
   }
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
+  setTimeout(() => {
+    localStorage.removeItem('creatUser');
+    refreshPage()
+  }, 10000);
+
   const state = localStorage.getItem('creatUser')
+
   return (
     <>{state === 'true' && state !== null ? 
       <header>
